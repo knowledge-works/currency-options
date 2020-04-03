@@ -1,0 +1,9 @@
+/* Add application styles & imports to this file! */
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+.form-control{
+  width: 40rem;
+}
+
+.btn-radio{
+  cursor: pointer;
+}

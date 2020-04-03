@@ -1,0 +1,26 @@
+<div class="container">
+	<h1>Currency quantity calculator</h1>
+	<currency-form (sendObj)="calculateCurrency($event)"></currency-form>
+	<br>
+	
+  <div *ngIf="message" class="alert alert-success">
+		Hey am <strong>{{message}}</strong>
+	</div>
+	
+  <br/>
+
+	<table class="table table-bordered" *ngIf="availableOptions.length > 0">
+		<thead>
+			<tr>
+				<th>currency</th>
+				<th>quantity</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let option of availableOptions trackBy: trackByFn">
+				<td class="currency">{{option.currency}}</td>
+				<td class="quantity">{{option.quantity}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
